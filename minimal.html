@@ -84,15 +84,14 @@
 
 
     <div class="container blog main first" id="blog-main">
-        <h1 >
+        <h1>
             Introduction
         </h1>
         <p class='text'>
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Urna non ligula sed ante ultricies. Nam nam tortor elit turpis fermentum praesent. Tristique porttitor sodales rhoncus duis tellus mus vivamus lacus. Nam platea lectus aliquam placerat; quis dignissim nisi ornare. Habitant himenaeos adipiscing dictum fringilla metus.
+            Inverse problems are ubiquitous in science and engineering, playing a crucial role in simulation-based scientific discovery and real-world applications. These problems arise in fields ranging from medical imaging and remote sensing to astrophysics and computational neuroscience. At their core, inverse problems aim to recover an unknown signal from noisy observations, where the measurement process may be incomplete or degraded.
         </p>
-
         <p class="text">
-            Sagittis donec nibh etiam leo eget iaculis proin. Dapibus morbi vitae ad vestibulum montes odio varius. Ullamcorper finibus nibh suscipit libero velit suspendisse. Potenti potenti risus integer libero semper potenti vivamus. Libero cras lectus netus faucibus nisl. Congue aliquet congue ante netus eu, vestibulum arcu. Scelerisque tempor taciti senectus mus penatibus condimentum consequat in. Tempor conubia molestie tristique; orci taciti augue. Justo ultrices consequat hac vivamus proin sodales.
+            Traditional approaches have relied on sparse priors, providing theoretical guarantees for unique data recovery. More recent approaches leverage information directly from data, with state-of-the-art techniques employing generative diffusion models. Despite their impressive capabilities, diffusion models face significant challenges in solving inverse problems. The primary difficulty stems from the intractability of the posterior distribution when using unconditionally trained models. These approximations often lead to inaccurate sampling and artifacts in reconstructed data. Furthermore, current diffusion-based approaches lack robustness to parameters such as gradient step size and measurement noise, limiting their practical utility in real-world applications.
         </p>
     </div>
 
@@ -102,6 +101,16 @@
             Erat id non venenatis nullam leo nisl risus fames. Quis montes tortor aenean posuere non. Maximus dui cras enim tristique; ipsum pellentesque ut. Mauris hac felis elit scelerisque nascetur risus adipiscing ultrices. Quis augue pulvinar laoreet facilisis vel. Pharetra blandit nunc id, sem cubilia sit porttitor. Montes hendrerit vestibulum vulputate tincidunt facilisis metus. Interdum mi vivamus nunc consectetur adipiscing; aptent semper dictum.
         </p>
     </div>
+
+    <div class="container blog main">
+        <h1>Our Contributions</h1>
+        <p class="text">
+            We propose a <i>Diffusion State-Guided Projected Gradient</i> (DiffStateGrad) to address the challenge of staying on the data manifold in solving inverse problems. We focus on gradient-based measurement guidance approaches that use the measurement as guidance to move the intermediate diffusion state toward high-probability regions of the posterior. DiffStateGrad projects the measurement guidance gradient onto a low-rank subspace, capturing the data statistics of the learned prior. We define a projection step to preserve the measurement gradient on the tangent space of the state manifold. We achieve this projection by performing singular value decomposition (SVD) on the diffusion state of an image to which guidance is applied and use the highest contributing singular vectors as our projection matrix.
+        </p>
+        <p class="text">
+        Our key contributions include showing that the crucial factor is the choice of the subspace, not just its low-rank nature. We theoretically prove how DiffStateGrad helps samples remain on or close to the manifold, improving reconstruction quality. Our method increases the robustness of diffusion models to measurement guidance gradient step size and measurement noise, with dramatic improvements in metrics across various tasks. For example, DiffStateGrad improves the LPIPS of PSLD from 0.463 to 0.165 on random inpainting with large step sizes. We also empirically demonstrate that DiffStateGrad significantly improves worst-case performance, reducing the failure rate from 26% to 4% on phase retrieval tasks, and consistently shows lower standard deviation than state-of-the-art methods.
+    </p>
+</div>
 
     <div class="container blog main">
         <h1>Results</h1>
