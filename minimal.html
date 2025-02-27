@@ -49,51 +49,38 @@
     <!-- Title Page -->
     <!-- Dark Theme Example: Change the background colour dark and change the following div "blog-title" into "blog-title white". -->
     <div class="container blog" id="first-content" style="background-color: #E0E4E6;">
-        <!-- If you don't have a project cover: Change "blog-title" into "blog-title no-cover"  -->
-        <div class="blog-title">
-            <div class="blog-intro">
-                <div>
-                    <h1 class="title">Diffusion State-Guided Projected Gradient for Inverse Problems</h1>
-                    <p class="author">
-                        Rayhan Zirvi <sup>*1</sup>, Bahareh Tolooshams <sup>*1</sup>, and Anima Anandkumar <sup>1</sup>
-                    </p>
-                    <p class="author" style="font-size: smaller; padding-top: 0px;">
-                        <sup>*</sup> Equal contribution
-                    </p>
-                    <p class="author" style="padding-top: 0px;">
-                        <sup>1</sup> Computing and Mathematical Sciences, California Institute of Technology
-                    </p>
-                    <p class="abstract">
-                        Recent advancements in diffusion models have been effective in learning data priors for solving inverse problems. They leverage diffusion sampling steps for inducing a data prior while using a measurement guidance gradient at each step to impose data consistency. For general inverse problems, approximations are needed when an unconditionally trained diffusion model is used since the measurement likelihood is intractable, leading to inaccurate posterior sampling. In other words, due to their approximations, these methods fail to preserve the generation process on the data manifold defined by the diffusion prior, leading to artifacts in applications such as image restoration. To enhance the performance and robustness of diffusion models in solving inverse problems, we propose <i>Diffusion State-Guided Projected Gradient</i> (DiffStateGrad), which projects the measurement gradient onto a subspace that is a low-rank approximation of an intermediate state of the diffusion process. DiffStateGrad, as a module, can be added to a wide range of diffusion-based inverse solvers to improve the preservation of the diffusion process on the prior manifold and filter out artifact-inducing components. We highlight that DiffStateGrad improves the robustness of diffusion models in terms of the choice of measurement guidance step size and noise while improving the worstcase performance. Finally, we demonstrate that DiffStateGrad improves upon the state-of-the-art on linear and nonlinear image restoration inverse problems.
-                    </p>
-                    <!-- Using FontAwesome Pro -->
-                    <!-- <div class="info">
-                        <div>
-                            <a href="https://arxiv.org/abs/2410.03463" class="button icon" style="background-color: rgba(255, 255, 255, 0.3)"> Paper <i class="far fa-book-open"></i></a> &nbsp;&nbsp; 
-                            <a href="https://github.com" class="button icon" style="background-color: rgba(255, 255, 255, 0.3)">Code <i class="far fa-code"></i></a>  &nbsp;&nbsp; 
-                        </div>
-                    </div> -->
-
-                    <!-- Using FontAwesome Free -->
-                    <div class="info">
-                        <div>
-                            <a href="https://arxiv.org/abs/2410.03463" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)"> Paper <i class="fa-solid fa-book-open"></i></a> &nbsp;&nbsp; 
-                            <a href="https://github.com" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)">Code <i class="fa-solid fa-code"></i></a>  &nbsp;&nbsp; 
-                        </div>
+    <!-- If you don't have a project cover: Change "blog-title" into "blog-title no-cover"  -->
+    <div class="blog-title no-cover">
+        <div class="blog-intro">
+            <div>
+                <h1 class="title">Diffusion State-Guided Projected Gradient for Inverse Problems</h1>
+                <p class="author">
+                    Rayhan Zirvi <sup>*1</sup>, Bahareh Tolooshams <sup>*1</sup>, and Anima Anandkumar <sup>1</sup>
+                </p>
+                <p class="author" style="font-size: smaller; padding-top: 0px;">
+                    <sup>*</sup> Equal contribution
+                </p>
+                <p class="author" style="padding-top: 0px;">
+                    <sup>1</sup> Computing and Mathematical Sciences, California Institute of Technology
+                </p>
+                <p class="abstract">
+                    Recent advancements in diffusion models have been effective in learning data priors for solving inverse problems. They leverage diffusion sampling steps for inducing a data prior while using a measurement guidance gradient at each step to impose data consistency. For general inverse problems, approximations are needed when an unconditionally trained diffusion model is used since the measurement likelihood is intractable, leading to inaccurate posterior sampling. In other words, due to their approximations, these methods fail to preserve the generation process on the data manifold defined by the diffusion prior, leading to artifacts in applications such as image restoration. To enhance the performance and robustness of diffusion models in solving inverse problems, we propose <i>Diffusion State-Guided Projected Gradient</i> (DiffStateGrad), which projects the measurement gradient onto a subspace that is a low-rank approximation of an intermediate state of the diffusion process. DiffStateGrad, as a module, can be added to a wide range of diffusion-based inverse solvers to improve the preservation of the diffusion process on the prior manifold and filter out artifact-inducing components. We highlight that DiffStateGrad improves the robustness of diffusion models in terms of the choice of measurement guidance step size and noise while improving the worstcase performance. Finally, we demonstrate that DiffStateGrad improves upon the state-of-the-art on linear and nonlinear image restoration inverse problems.
+                </p>
+                <!-- Using FontAwesome Free -->
+                <div class="info">
+                    <div>
+                        <a href="https://arxiv.org/abs/2410.03463" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)"> Paper <i class="fa-solid fa-book-open"></i></a> &nbsp;&nbsp; 
+                        <a href="https://github.com" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)">Code <i class="fa-solid fa-code"></i></a>  &nbsp;&nbsp; 
                     </div>
                 </div>
-               
-                <div class="info">
-                    <p>ICLR 2025</p>
-                </div>
             </div>
-
-            <div class="blog-cover">
-                <img class="foreground" src="assets/figures/clarity.png">
-                <img class="background" src="assets/figures/clarity.png">
+           
+            <div class="info">
+                <p>ICLR 2025</p>
             </div>
         </div>
     </div>
+</div>
 
 
     <div class="container blog main first" id="blog-main">
