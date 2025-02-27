@@ -143,19 +143,24 @@
         <p class="text">
             DiffStateGrad significantly improves the robustness of diffusion models to various factors. Our experiments show that while conventional methods deteriorate when measurement gradient step size increases, DiffStateGrad maintains high performance across a wide range of step sizes. Similarly, when faced with increasing measurement noise, DiffStateGrad exhibits superior resilience compared to standard methods, which experience substantial performance degradation.
         </p>
+    </div>
 
-        <div class="container blog main gray">
-        <img src="clarity/images/step_size_robus.png">
-            <p class="caption">
-                DiffStateGrad improves robustness to measurement gradient (MG) step size.
-            </p>
-        </div>
-        <div class="container blog main gray">
-        <img src="clarity/images/noise_robust.png">
-            <p class="caption">
-                DiffStateGrad improves robustness to measurement noise.
-            </p>
-        </div>
+    <div class="container blog main gray">
+    <img src="clarity/images/step_size_robus.png">
+        <p class="caption">
+            DiffStateGrad improves robustness to measurement gradient (MG) step size.
+        </p>
+    </div>
+
+        
+    <div class="container blog main gray">
+    <img src="clarity/images/noise_robust.png">
+        <p class="caption">
+            DiffStateGrad improves robustness to measurement noise.
+        </p>
+    </div>
+
+    <div>
         <h2>Performance</h2>
     <p class="text">
         Our quantitative and qualitative results demonstrate substantial improvement in performance across a variety of linear and nonlinear tasks. DiffStateGrad enhances both pixel-based and latent solvers, with particularly impressive gains in challenging tasks like phase retrieval and high dynamic range reconstruction. For example, when applied to ReSample for phase retrieval, DiffStateGrad improves PSNR from 27.61 to 31.19 while reducing standard deviation from 8.07 to 4.33, indicating both better and more consistent performance.
