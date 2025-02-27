@@ -96,9 +96,9 @@
     </div>
 
     <div class="container blog main gray">
-        <img src="clarity/images/vit.png">
+        <img src="clarity/images/manifold_diffstategrad.png">
         <p class="caption">
-            Erat id non venenatis nullam leo nisl risus fames. Quis montes tortor aenean posuere non. Maximus dui cras enim tristique; ipsum pellentesque ut. Mauris hac felis elit scelerisque nascetur risus adipiscing ultrices. Quis augue pulvinar laoreet facilisis vel. Pharetra blandit nunc id, sem cubilia sit porttitor. Montes hendrerit vestibulum vulputate tincidunt facilisis metus. Interdum mi vivamus nunc consectetur adipiscing; aptent semper dictum.
+            <strong>High-level interpretation of Diffusion State-Guided Projected Gradient (DiffStateGrad).</strong> DiffStateGrad projects the measurement gradient onto a subspace defined to capture statistics of the diffusion state at time t on which the gradient guidance is applied. This helps the process stay closer to the data manifold during the diffusion process, resulting in better posterior sampling. Without such projection, the measurement gradient pushes the process off the data manifold. For when the measurement gradient guidance is applied to z<sub>0|t</sub>, the projection is defined to capture the structure of the tangent space of the clean data manifold. The dotted straight line conceptually visualizes the subspace to which the measurement gradient is projected.
         </p>
     </div>
 
@@ -108,8 +108,16 @@
             We propose a <i>Diffusion State-Guided Projected Gradient</i> (DiffStateGrad) to address the challenge of staying on the data manifold in solving inverse problems. We focus on gradient-based measurement guidance approaches that use the measurement as guidance to move the intermediate diffusion state toward high-probability regions of the posterior. DiffStateGrad projects the measurement guidance gradient onto a low-rank subspace, capturing the data statistics of the learned prior. We define a projection step to preserve the measurement gradient on the tangent space of the state manifold. We achieve this projection by performing singular value decomposition (SVD) on the diffusion state of an image to which guidance is applied and use the highest contributing singular vectors as our projection matrix.
         </p>
         <p class="text">
-        Our key contributions include showing that the crucial factor is the choice of the subspace, not just its low-rank nature. We theoretically prove how DiffStateGrad helps samples remain on or close to the manifold, improving reconstruction quality. Our method increases the robustness of diffusion models to measurement guidance gradient step size and measurement noise, with dramatic improvements in metrics across various tasks. For example, DiffStateGrad improves the LPIPS of PSLD from 0.463 to 0.165 on random inpainting with large step sizes. We also empirically demonstrate that DiffStateGrad significantly improves worst-case performance, reducing the failure rate from 26% to 4% on phase retrieval tasks, and consistently shows lower standard deviation than state-of-the-art methods.
-    </p>
+    Our key contributions include:
+    <ul>
+        <li>Showing that the crucial factor is the choice of the subspace, not just its low-rank nature</li>
+        <li>Theoretically proving how DiffStateGrad helps samples remain on or close to the manifold, improving reconstruction quality</li>
+        <li>Increasing the robustness of diffusion models to measurement guidance gradient step size and measurement noise, with dramatic improvements in metrics across various tasks</li>
+        <li>Improving metrics significantly - for example, DiffStateGrad reduces the LPIPS of PSLD from 0.463 to 0.165 on random inpainting with large step sizes</li>
+        <li>Empirically demonstrating that DiffStateGrad significantly improves worst-case performance, reducing the failure rate from 26% to 4% on phase retrieval tasks</li>
+        <li>Consistently showing lower standard deviation than state-of-the-art methods</li>
+    </ul>
+</p>
 </div>
 
     <div class="container blog main">
