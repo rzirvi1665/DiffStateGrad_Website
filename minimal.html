@@ -53,7 +53,7 @@
         <div class="blog-title">
             <div class="blog-intro">
                 <div>
-                    <h1 class="title">Clarity: A Minimalist Website Template for AI Research</h1>
+                    <h1 class="title">Diffusion State-Guided Projected Gradient for Inverse Problems</h1>
                     <p class="author">
                         Rayhan Zirvi <sup>*1</sup>, Bahareh Tolooshams <sup>*1</sup>, and Anima Anandkumar <sup>1</sup>
                     </p>
@@ -64,15 +64,13 @@
                         <sup>1</sup> Computing and Mathematical Sciences, California Institute of Technology
                     </p>
                     <p class="abstract">
-                        Welcome to Clarity — an open-source, minimalist website template designed for presenting AI research. Originally developed as the foundation for my personal website, Clarity offers a modular, clean design that is easy to customise for simple, project-based website creation. With Clarity, you can effectively showcase your work, ensuring your research stands out in a visually appealing and professional manner. 
+                        Recent advancements in diffusion models have been effective in learning data priors for solving inverse problems. They leverage diffusion sampling steps for inducing a data prior while using a measurement guidance gradient at each step to impose data consistency. For general inverse problems, approximations are needed when an unconditionally trained diffusion model is used since the measurement likelihood is intractable, leading to inaccurate posterior sampling. In other words, due to their approximations, these methods fail to preserve the generation process on the data manifold defined by the diffusion prior, leading to artifacts in applications such as image restoration. To enhance the performance and robustness of diffusion models in solving inverse problems, we propose <i>Diffusion State-Guided Projected Gradient</i> (DiffStateGrad), which projects the measurement gradient onto a subspace that is a low-rank approximation of an intermediate state of the diffusion process. DiffStateGrad, as a module, can be added to a wide range of diffusion-based inverse solvers to improve the preservation of the diffusion process on the prior manifold and filter out artifact-inducing components. We highlight that DiffStateGrad improves the robustness of diffusion models in terms of the choice of measurement guidance step size and noise while improving the worstcase performance. Finally, we demonstrate that DiffStateGrad improves upon the state-of-the-art on linear and nonlinear image restoration inverse problems.
                     </p>
                     <!-- Using FontAwesome Pro -->
                     <!-- <div class="info">
                         <div>
-                            <a href="https://arxiv.org" class="button icon" style="background-color: rgba(255, 255, 255, 0.3)"> Paper <i class="far fa-book-open"></i></a> &nbsp;&nbsp; 
+                            <a href="https://arxiv.org/abs/2410.03463" class="button icon" style="background-color: rgba(255, 255, 255, 0.3)"> Paper <i class="far fa-book-open"></i></a> &nbsp;&nbsp; 
                             <a href="https://github.com" class="button icon" style="background-color: rgba(255, 255, 255, 0.3)">Code <i class="far fa-code"></i></a>  &nbsp;&nbsp; 
-                            <a href="https://www.microsoft.com/en-gb/microsoft-365/powerpoint" class="button icon" style="background-color: rgba(255, 255, 255, 0.3);">Slides <i class="far fa-presentation"></i></a>  &nbsp;&nbsp; 
-                            <a href="https://huggingface.co/spaces" class="button icon" style="background-color: rgba(255, 255, 255, 0.3)">Demo <i class="fa-light fa-face-smiling-hands"></i></a>
                         </div>
                     </div> -->
 
@@ -88,7 +86,7 @@
                 </div>
                
                 <div class="info">
-                    <p>CVPR 2048 / Best Paper Award</p>
+                    <p>ICLR 2025</p>
                 </div>
             </div>
 
@@ -219,15 +217,10 @@
         </p>
     </div>
 
-    <div class="container blog main">
-        <h1>Citation</h1>
-        <p class="text">
-            Dictumst eu himenaeos malesuada nisi eros auctor id suspendisse. Ipsum parturient est vitae proin maecenas. Nulla mollis vivamus cras nam dapibus consectetur. Id efficitur ac ultricies ornare at litora. Vestibulum nibh cursus eu gravida vivamus sem vulputate. Montes nisi ipsum urna vitae semper suscipit.
-        </p>
 <pre><code class="plaintext">@inproceedings{zirvi2025diffusion,
     title={Diffusion State-Guided Projected Gradient for Inverse Problems},
-    author={Zirvi, Rayhan and Tolooshams, Bahareh and Anandkumar, Anima},
-    booktitle={International Conference on Learning Representations},
+    author={Rayhan Zirvi and Bahareh Tolooshams and Anima Anandkumar},
+    booktitle={The Thirteenth International Conference on Learning Representations},
     year={2025}
 }</code></pre>
     </div>
